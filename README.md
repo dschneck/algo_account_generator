@@ -15,15 +15,12 @@ file called config.json in the format
 *Make sure to pip install all of the dependencies found in requirements.txt*
 
 ### To run the generator: 
-	> python<your version> generator.py <# of accounts you want> 
+	$ python<your version> generator.py <# of accounts you want> 
 
 ### Example
-	**Input:**
 
 	$ python3.8 generator.py 2
 	
-	**Output:**
-
 ```
 {
 	"hj65k423k34l2": "3214jkl234jl1234",

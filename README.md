@@ -8,10 +8,11 @@ file called config.json in the format
 {
 	"ALGOD_TOKEN": "<node token>",
 	"ALGOD_ADDRESS": "<node address>"
-
 }
 
 ```
+
+*Make sure to pip install all of the dependencies found in requirements.txt*
 
 ### To run the generator: 
 	> python<your version> generator.py <# of accounts you want> 

@@ -1,0 +1,4 @@
+# This is where you Algod token and address will be
+*.json
+.DS_STORE
+*.tmp

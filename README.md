@@ -1,4 +1,18 @@
-Tool to create a bunch of algorand accounts. It saves the public/private key pairs in a json file.
+# Account Generator
+This is a tool to create a bunch of algorand accounts. It saves the public/private key pairs in a json file.
 
-You have to have your own client token and address from an node of your choice.
+You have to have your own client token and address from a node of your choice. Place them in a 
+file called config.json in the format
+
+```
+{
+	"ALGOD_TOKEN": "<node token>",
+	"ALGOD_ADDRESS": "<node address>"
+
+}
+
+```
+
+### To run the generator: 
+	> python<your version> generator.py <# of accounts you want> 
 

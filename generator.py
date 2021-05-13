@@ -1,34 +1,35 @@
+#!/usr/bin/env python3
+
 import secrets
 import json
 import sys
 from algosdk import account, mnemonic
 from algosdk.v2client import algod
 
-def generateAccounts(N):
-	ret = dict()
+class Generator:
+	def generateAccounts(self, numAccounts):
+		ret = dict()
 
-	for i in range(0, N):
-		private_key, address = account.generate_account()
-		ret[private_key] = address
+		for i in range(0, numAccounts):
+			private_key, address = account.generate_account()
+			ret[private_key] = address
 
-	return ret
+		return ret
 
-def generator():
-	algod_client = None
+	def generator(self, file_name, numAccounts):
+		algod_client = None
 
-	# You need to make your own config.json with your 
-	# ALGOD_TOKEN and ALGOD_ADDRESS given to you by your access nodeo
-	with open("config.json", "r") as config:
-		info = json.load(config)
-		algod_client = algod.AlgodClient(info["ALGOD_TOKEN"],info["ALGOD_ADDRESS"])
+		# ALGOD_TOKEN and ALGOD_ADDRESS given to you by your access node
+		with open(file_name, "r") as config:
+			info = json.load(config)
+			algod_client = algod.AlgodClient(info["ALGOD_TOKEN"],info["ALGOD_ADDRESS"])
 
-	file_name = "accounts-{}.json".format(secrets.randbits(32)) 
+		output_file_name = "accounts-{}.json".format(secrets.randbits(32)) 
 
-	with open(file_name, "w") as output:
-		n = int(sys.argv[1])
-		final_object = generateAccounts(n)
-		json.dump(final_object, output, indent=4)
-	
+		with open(output_file_name, "w") as output:
+			final_object = self.generateAccounts(numAccounts)
+			json.dump(final_object, output, indent=4)
+		
 if __name__ == '__main__':
-	generator()
+	Generator().generator("config.json", int(sys.argv[1]))
 

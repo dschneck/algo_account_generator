@@ -24,5 +24,5 @@ class Generator:
 			json.dump(final_object, output, indent=4)
 		
 if __name__ == '__main__':
-	Generator().generator("algo-config.json", int(sys.argv[1]))
+	Generator().generator("config.json", int(sys.argv[1]))
 

@@ -2,3 +2,6 @@
 *.json
 .DS_STORE
 *.tmp
+
+# My own testing purposes
+assortedAccounts

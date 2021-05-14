@@ -15,7 +15,7 @@ class Generator:
 
 		return ret
 
-	def generator(self, file_name, numAccounts):
+	def generator(self, numAccounts):
 
 		output_file_name = "accounts-{}.json".format(secrets.randbits(32)) 
 
@@ -24,5 +24,5 @@ class Generator:
 			json.dump(final_object, output, indent=4)
 		
 if __name__ == '__main__':
-	Generator().generator("config.json", int(sys.argv[1]))
+	Generator().generator(int(sys.argv[1]))
 

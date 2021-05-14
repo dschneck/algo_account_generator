@@ -1,16 +1,5 @@
 # Algorand Account Generator
-This is a tool to create a bunch of algorand accounts. It saves the public/private key pairs in a json file.
-
-You have to have your own client token and address from a node of your choice. Place them in a 
-file called config.json in the format
-
-```
-{
-	"ALGOD_TOKEN": "<node token>",
-	"ALGOD_ADDRESS": "<node address>"
-}
-
-```
+This is a tool to create a bunch of algorand accounts. It saves the the passphrase to a json file.
 
 *Make sure to pip install all of the dependencies found in requirements.txt*
 
@@ -23,8 +12,8 @@ file called config.json in the format
 	
 ```
 {
-	"hj65k423k34l2": "3214jkl234jl1234",
-	"l45536j7kl43d": "7jk4l35j43kl56j3"
+	"0": "tone dawn blue bring cute satoshi miss glue insect glove comic orient work dash quiz urban today swift crime wife check vacuum force above rebuild",
+    "1": "magnet lamp floor thought media jar glare trouble tumble assault gap card economy soda patrol wagon twenty private bonus decorate enjoy mixed child able sock"
 }
 
 ```
